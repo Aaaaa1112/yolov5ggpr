@@ -252,7 +252,7 @@ def main(opt):
     check_requirements(exclude=('tensorboard', 'thop'))
     run(**vars(opt))
 
-
+#print（"11"）
 if __name__ == "__main__":
     opt = parse_opt()
     main(opt)
