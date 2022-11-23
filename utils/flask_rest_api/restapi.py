@@ -5,7 +5,6 @@ Run a Flask REST API exposing one or more YOLOv5s models
 
 import argparse
 import io
-
 import torch
 from flask import Flask, request
 from PIL import Image
@@ -13,10 +12,10 @@ from PIL import Image
 app = Flask(__name__)
 models = {}
 
-DETECTION_URL = "/v1/object-detection/<model>"
+DETECTION_URL = "/"
+# v1/object-detection/<model>
 
-
-@app.route(DETECTION_URL, methods=["POST"])
+@app.route(DETECTION_URL, methods=["POST","GET"])
 def predict(model):
     if request.method != "POST":
         return
@@ -27,9 +26,9 @@ def predict(model):
         #     im = Image.open(io.BytesIO(f.read()))
 
         # Method 2
-        im_file = request.files["image"]
-        im_bytes = im_file.read()
-        im = Image.open(io.BytesIO(im_bytes))
+        im_file = request.files["image"]    #ok
+        im_bytes = im_file.read()        #ok
+        im = Image.open(io.BytesIO(im_bytes)) #ok
 
         if model in models:
             results = models[model](im, size=640)  # reduce size=320 for faster inference
@@ -43,6 +42,8 @@ if __name__ == "__main__":
     opt = parser.parse_args()
 
     for m in opt.model:
-        models[m] = torch.hub.load("ultralytics/yolov5", m, force_reload=True, skip_validation=True)
+        models[m] = torch.hub.load("G:\keti111\yolov5\yolov5gpr", m, force_reload=False, skip_validation=True,source="local")
 
     app.run(host="0.0.0.0", port=opt.port)  # debug=True causes Restarting with stat
+
+# opt.port
