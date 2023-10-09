@@ -35,7 +35,7 @@ Pillow==7.1.2
 pipreqs==0.4.11
 ply==3.11
 prompt-toolkit==3.0.32
-protobuf==3.20.1
+protobuf==4.24.4
 psutil==5.9.3
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
