@@ -49,7 +49,7 @@ rsa==4.9
 scipy==1.4.1
 seaborn==0.11.0
 smmap==5.0.0
-tensorboard==2.4.1
+tensorboard==2.15.0
 tensorboard-plugin-wit==1.8.1
 thop==0.1.1.post2209072238
 torch==1.12.0
