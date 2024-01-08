@@ -31,7 +31,7 @@ opencv-python==4.6.0.66
 pandas==1.1.4
 parso==0.8.3
 pickleshare==0.7.5
-Pillow==7.1.2
+Pillow==10.2.0
 pipreqs==0.4.11
 ply==3.11
 prompt-toolkit==3.0.32
