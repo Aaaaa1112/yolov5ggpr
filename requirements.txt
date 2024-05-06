@@ -39,7 +39,7 @@ protobuf==3.20.1
 psutil==5.9.3
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-Pygments==2.13.0
+Pygments==2.18.0
 PyQt5==5.15.7
 pytz==2022.6
 PyYAML==5.3.1
