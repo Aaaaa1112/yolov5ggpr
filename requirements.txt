@@ -34,7 +34,7 @@ pickleshare==0.7.5
 Pillow==7.1.2
 pipreqs==0.4.11
 ply==3.11
-prompt-toolkit==3.0.32
+prompt-toolkit==3.0.48
 protobuf==3.20.1
 psutil==5.9.3
 pyasn1==0.4.8
